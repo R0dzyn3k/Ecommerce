@@ -14,7 +14,7 @@ public class CreateProductCommandValidator : Validator<CreateProductCommand>
             .MaximumLength(255);
 
         RuleFor(x => x.DescriptionShort)
-            .MaximumLength(255);
+            .MaximumLength(512);
 
         RuleFor(x => x.Price)
             .NotNull()
