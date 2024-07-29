@@ -26,6 +26,10 @@ public class ProductEntityTypeConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Price)
             .IsRequired()
             .HasColumnType("decimal(19,4)");
+
+        builder.Property(x => x.Sku)
+            .IsRequired()
+            .HasMaxLength(64);
         
         // builder.Property(x => x.Description)
         //     .IsRequired();
@@ -33,8 +37,6 @@ public class ProductEntityTypeConfiguration : IEntityTypeConfiguration<Product>
         // builder.Property(x => x.Ean)
         //     .HasMaxLength(13);
         //
-        // builder.Property(x => x.Sku)
-        //     .HasMaxLength(50);
         //
         // builder.Property(x => x.Mpn)
         //     .HasMaxLength(50);

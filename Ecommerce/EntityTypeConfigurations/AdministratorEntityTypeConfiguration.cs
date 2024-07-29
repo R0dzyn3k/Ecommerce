@@ -19,6 +19,9 @@ public class AdministratorEntityTypeConfiguration : IEntityTypeConfiguration<Adm
             .IsRequired()
             .HasMaxLength(50);
 
+        builder.Property(x => x.Role)
+            .IsRequired();
+        
         builder.Property(x => x.Password)
             .IsRequired()
             .HasMaxLength(60);
